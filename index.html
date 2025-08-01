@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasword</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+     <div class="main-box">
+        <h2>Password Generator</h2>
+        <div class="display-container">
+            <p class="password-display">Password will display here</p>
+            <button class="copy-btn">Copy</button>
+        </div>
+        
+        <div class="password-length">
+            <label for="length">Enter Password Length :</label>
+            <input type="number" class="length" max="20" value="10">
+        </div>
+    
+    <div class="container">
+        <label>
+            Easy Password
+            <input type="radio" name="passwordType" value="easy" class="password-option">
+        </label>
+        <label>
+            Strong Password
+            <input type="radio" name="passwordType" value="strong" class="password-option">
+        </label>
+        <label>
+            Super Strong Password
+            <input type="radio" name="passwordType" value="super-strong" class="password-option">
+        </label>
+        <label>
+            Funny Password
+            <input type="radio" name="passwordType" value="funny" class="password-option">
+        </label>
+    </div>
+    
+    <div class="buttons">
+        <button class="generate-btn">Generate Password</button>
+        <button class="regenerate">Regentrate</button>
+    </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>

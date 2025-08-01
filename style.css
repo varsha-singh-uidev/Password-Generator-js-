@@ -1,0 +1,164 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --text-color: #ffffff;
+  --accent-color: #1be1c0;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-hover: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-gradient);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+.main-box {
+  width: 90%;
+  max-width: 500px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+h2 {
+  font-size: 35px;
+  color: var(--accent-color);
+}
+
+.display-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.password-display {
+  font-size: 18px;
+  overflow-x: auto;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.copy-btn {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.password-length {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.length {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--btn-bg);
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.container label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--btn-bg);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.password-option {
+  transform: scale(1.5);
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.generate-btn, .regenerate {
+  padding: 10px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--btn-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.generate-btn:hover, .regenerate:hover {
+  background-color: var(--btn-hover);
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+@media screen and (max-width: 500px) {
+  .main-box {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .display-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
